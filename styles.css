@@ -123,14 +123,15 @@ body {
 	width: 40px;
 	height: 40px;
 	margin-right: 10px;
+	background-size: cover;
 }
 
 .header-contacts__el-icon_phone {
-	background: url(images/tel.png);
+	background-image: url(images/tel.png);
 }
 
 .header-contacts__el-icon_mail {
-	background: url(images/mail.png);
+	background-image: url(images/mail.png);
 }
 
 .header-contacts__el-text {
@@ -284,26 +285,28 @@ body {
 .about-features__feature-icon {
 	width: 75px;
 	margin-right: 10px;
-	background: url(images/about-icons_sprite.png) no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-.about-features__feature-icon_gears {
+.about-features__feature-icon_gears {	
 	height: 75px;
+	background-image: url(images/about-gearIcon.png);
 }
 
 .about-features__feature-icon_leaves {
 	height: 53px;
-	background-position: -95px -11px;
+	background-image: url(images/about-leavesIcon.png);
 }
 
 .about-features__feature-icon_quality {
 	height: 95px;
-	background-position: -190px 0;
+	background-image: url(images/about-qualityIcon.png);
 }
 
 .about-features__feature-icon_graph {
 	height: 75px;
-	background-position: -285px 0;
+	background-image: url(images/about-graphIcon.png);
 }
 
 .about-features__feature-text {
@@ -381,24 +384,25 @@ body {
 .hww-steps__step-icon {
 	width: 140px;
 	height: 140px;
-	margin-bottom: 30px;
-	background: url(images/hww-icons-sprite.png);
+	margin-bottom: 30px;	
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .hww-steps__step-icon_call {
-	
+	background-image: url(images/hww-1.png);
 }
 
 .hww-steps__step-icon_confirm {
-	background-position: -160px 0;
+	background-image: url(images/hww-2.png);
 }
 
 .hww-steps__step-icon_pay {
-	background-position: -320px 0;
+	background-image: url(images/hww-3.png);
 }
 
 .hww-steps__step-icon_delievery {
-	background-position: -480px 0;
+	background-image: url(images/hww-4.png);
 }
 
 .hww-steps__step-text {
@@ -497,19 +501,24 @@ body {
 	width: 50px;
 	height: 50px;
 	margin-right: 10px;
-	background: url(images/contacts-icons-sprite.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.contacts__el-icon_phone {
+	background-image: url(images/contacts-callIcon.png);
 }
 
 .contacts__el-icon_mail {
-	background-position: -70px;
+	background-image: url(images/contacts-mailIcon.png);
 }
 
 .contacts__el-icon_work-time {
-	background-position: -140px;
+	background-image: url(images/contacts-hoursIcon.png);
 }
 
 .contacts__el-icon_location {
-	background-position: -210px;
+	background-image: url(images/contacts-adrIcon.png);
 }
 
 
@@ -758,12 +767,13 @@ body {
 	}
 
 	.hww-steps {
-		width: 60%;
+		/*width: 60%;*/
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.hww-steps__step {
-		width: 150px;
+		width: 45%;
 	}
 
 	.hww-steps__step_margin {
@@ -792,5 +802,90 @@ body {
 
 	.contacts__col_margin {
 		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	html {
+		font-size: 50%;
+	}
+
+	.header__content {
+		flex-wrap: wrap;
+		height: auto;
+		padding-bottom: 10px;
+	}
+
+	.header-logo {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.header-contacts {
+		height: 60px;
+	}
+
+	.header-contacts__el-icon {
+		width: 25px;
+		height: 25px;
+	}
+
+	.nav__menu {
+		top: 54px;
+	}
+
+	.about__content {
+		padding: 10px;
+	}
+
+	.about-features__feature {
+		flex-direction: column;
+	}
+
+	.about-features__feature-icon {
+		margin-bottom: 10px;
+	}
+
+	.about-features__feature-text {
+		width: 80%;
+		text-align: center;
+	}
+
+	.hww-steps {
+		width: auto;
+	}
+
+	.hww-steps__step-icon {
+		width: 100px;
+		height: 100px;
+	}
+
+	.folio__content {
+		padding: 25px 5px;
+	}
+
+	.folio__images {
+		width: 100%;
+	}
+
+	.folio__images-image {
+		height: 150px;
+	}
+
+	.contacts__content {
+		padding: 25px 5px;
+	}
+
+	.contacts__container {
+		width: 100%;
+	}
+
+	.contacts__el-icon {
+		width: 35px;
+		height: 35px;
+	}
+
+	.contacts__el-text {
+		width: 80%;
 	}
 }
